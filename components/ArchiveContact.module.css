@@ -1,0 +1,25 @@
+.archiveSection {
+  padding: 80px 6vw;
+  background: #E5E7EB;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.archiveText {
+  max-width: 700px;
+}
+
+.archivePlaceholder {
+  margin-top: 56px;
+  color: #1E4ED8;
+  font-size: clamp(24px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.word {
+  opacity: 0.15;
+  display: inline;
+  will-change: opacity;
+  transition: opacity 0.1s ease-out;
+}

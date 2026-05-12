@@ -1,0 +1,50 @@
+.nav {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background: #111;
+  border-radius: 50px;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(780px, 90vw);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.link, .resume {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.link {
+  color: #aaa;
+}
+
+.resume {
+  color: #fff;
+}
+
+.link:hover, .resume:hover {
+  color: #fff;
+}

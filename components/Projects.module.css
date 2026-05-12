@@ -1,0 +1,213 @@
+.projectsSection {
+  background: #E5E7EB;
+  padding: 80px 6vw;
+  text-align: center;
+}
+
+.projectsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 44px;
+}
+
+.projectsHeaderDeco {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--green-accent);
+  font-size: 14px;
+}
+
+.line {
+  width: 36px;
+  height: 1.5px;
+  background: var(--green-accent);
+}
+
+.projectsHeading {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projectCard {
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.25s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+}
+
+.projectThumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  background: #111;
+}
+
+.projectImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.playButton {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+.playButton {
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
+.playIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 68px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.78);
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.playIcon::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 13px;
+  border-left: 18px solid #fff;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+.playButton:hover .playIcon,
+.playButton:focus-visible .playIcon {
+  background: #ff0033;
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+.projectCard:hover .projectThumb {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+.projectName {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.projectType {
+  font-size: 13px;
+  color: #888;
+}
+
+.seeMoreButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 44px;
+  min-width: 132px;
+  height: 44px;
+  padding: 0 24px;
+  border: 1px solid #111;
+  border-radius: 999px;
+  color: #111;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.seeMoreButton:hover {
+  transform: translateY(-2px);
+  background: #111;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.videoModal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.videoModalInner {
+  position: relative;
+  width: min(1040px, 100%);
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  background: #000;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
+}
+
+.modalVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.closeButton {
+  position: absolute;
+  right: -12px;
+  top: -12px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Project color blocks */
+.thumbCapsule { background: linear-gradient(135deg, #f87d2c 0%, #e06010 100%); }
+.thumbShelf { background: linear-gradient(135deg, #7b68c8 0%, #5a8fc8 100%); }
+.thumbGrid { background: linear-gradient(135deg, #b5341a 0%, #8a2010 100%); }
+.thumbSmi { background: linear-gradient(135deg, #e8dcc8 0%, #d4c0a0 100%); }
+
+@media (max-width: 768px) {
+  .projectsGrid { grid-template-columns: 1fr; }
+}

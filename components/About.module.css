@@ -1,0 +1,153 @@
+.aboutSection {
+  background: #E5E7EB;
+  padding: 80px 6vw;
+}
+
+.aboutInner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aboutTitle {
+  font-size: 52px;
+  font-weight: 800;
+  color: #1E4ED8;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 1;
+  margin-bottom: 36px;
+}
+
+.aboutLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.visualGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 350px 180px;
+  gap: 20px;
+}
+
+.visualCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #E5E7EB;
+
+}
+
+.portraitCard {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  background: #E5E7EB;
+}
+
+.boardCard {
+  grid-column: 1;
+  grid-row: 2;
+  background: #171717;
+}
+
+.toolsCard {
+  grid-column: 2;
+  grid-row: 2;
+  background: #fff;
+}
+
+.imageCover,
+.imageContain {
+  object-position: center;
+}
+
+.imageCover {
+  object-fit: cover;
+}
+
+.imageContain {
+  object-fit: cover;
+}
+
+.portraitImage {
+  object-fit: contain;
+  object-position: center;
+  padding: 0;
+}
+
+.boardCard .imageCover {
+  object-position: center 56%;
+}
+
+.aboutText {
+  color: #000000;
+  font-size: 18px;
+  line-height: 1.78;
+}
+
+.scrubParagraph {
+  font-size: 26px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  font-weight: 500;
+  color: #111;
+  letter-spacing: -0.01em;
+}
+
+.scrubParagraph:last-child {
+  margin-bottom: 0;
+}
+
+.word {
+  opacity: 0.15;
+  display: inline;
+  will-change: opacity;
+  transition: opacity 0.1s ease-out;
+}
+
+.scrubParagraph strong {
+  color: #1E4ED8;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .aboutLayout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .aboutText {
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutSection {
+    padding: 64px 5vw;
+  }
+
+  .aboutTitle {
+    font-size: 40px;
+    margin-bottom: 28px;
+  }
+
+  .scrubParagraph {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .visualGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 420px 180px 220px;
+    gap: 14px;
+  }
+
+  .portraitCard,
+  .boardCard,
+  .toolsCard {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
