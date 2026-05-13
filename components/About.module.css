@@ -43,7 +43,19 @@
 .portraitCard {
   grid-column: 1 / -1;
   grid-row: 1;
-  background: #E5E7EB;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+.portraitWrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .boardCard {

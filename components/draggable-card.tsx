@@ -32,10 +32,9 @@ export function DraggableCard({
   const [zIndex, setZIndex] = useState(index + 10)
 
   // Convert vw fractions to CSS clamp values for responsive sizing
-  const minW = Math.round(widthVw * 320)
+  // Added a hard minimum width (120px) so cards aren't too small on mobile
+  const minW = Math.max(120, Math.round(widthVw * 320))
   const maxW = Math.round(widthVw * 1920)
-  const minH = Math.round(heightVw * 320)
-  const maxH = Math.round(heightVw * 1920)
 
   const widthCss = `clamp(${minW}px, ${widthVw * 100}vw, ${maxW}px)`
 

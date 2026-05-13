@@ -9,7 +9,7 @@ import styles from "./About.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const aboutImages = {
-  portrait: "/img/about me/photoofme.jpeg",
+  portrait: "/img/about me/photoofme.jpeg.png",
   board: "/img/about me/baord.jpeg",
   tools: "/img/about me/tools.png",
 };
@@ -91,14 +91,16 @@ export default function About() {
         <div className={styles.aboutLayout}>
           <div className={styles.visualGrid}>
             <figure className={`${styles.visualCard} ${styles.portraitCard}`} ref={addVisualRef}>
-              <Image
-                src={aboutImages.portrait}
-                alt="Portrait of Mayank"
-                fill
-                className={styles.portraitImage}
-                sizes="(max-width: 768px) 100vw, 460px"
-                priority={false}
-              />
+              <div className={styles.portraitWrapper}>
+                <Image
+                  src={aboutImages.portrait}
+                  alt="Portrait of Mayank"
+                  fill
+                  className={styles.portraitImage}
+                  sizes="(max-width: 768px) 100vw, 460px"
+                  priority={false}
+                />
+              </div>
             </figure>
 
             <figure className={`${styles.visualCard} ${styles.boardCard}`} ref={addVisualRef}>
@@ -123,12 +125,12 @@ export default function About() {
           </div>
 
           <div className={styles.aboutText} ref={textRef}>
-            <ScrubText 
-              text="Hi! I'm a Motion Designer with a deep passion for crafting compelling stories that solve real challenges for brands. I thrive on exploring complex tools, mastering new techniques, and turning creative obstacles into opportunities. Fueled by curiosity and collaboration, I'm always eager to share knowledge and connect with like-minded creatives to bring bold, impactful ideas to life." 
-              highlight="Motion Designer," 
+            <ScrubText
+              text="Hi! I'm a Motion Designer with a deep passion for crafting compelling stories that solve real challenges for brands. I thrive on exploring complex tools, mastering new techniques, and turning creative obstacles into opportunities. Fueled by curiosity and collaboration, I'm always eager to share knowledge and connect with like-minded creatives to bring bold, impactful ideas to life."
+              highlight="Motion Designer,"
             />
-            <ScrubText 
-              text="Outside of work, I explore ideas, collect inspiration, and build things that reflect my style. Whether it's editing, designing, or experimenting, I'm always leveling up." 
+            <ScrubText
+              text="Outside of work, I explore ideas, collect inspiration, and build things that reflect my style. Whether it's editing, designing, or experimenting, I'm always leveling up."
             />
           </div>
         </div>
